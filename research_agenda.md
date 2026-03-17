@@ -1,16 +1,8 @@
 # Research agenda: Measuring school connectivity 
 
-## M-Lab \<\> Giga
+* Version: 1  
+* First shared: 2026-03-13  
 
-Status: **draft** | current | needs update | obsolete  
-First shared: 2026-03-13  
-*Author(s): Pavlos Sermpezis [pavlos@measurementlab.net](mailto:pavlos@measurementlab.net)* 
-
-# Summary
-
-Research agenda for measuring school connectivity.
-
-# Research activities
 
 ## Workstream 1: Improving measurement tools
 
@@ -37,7 +29,9 @@ New measurements, methods and tools can include: application layer measurements 
 * Create a rich dataset per school, with information about its connectivity to the outside world (from/to as many destinations as possible). Include all measurement from all M-Lab servers –even servers far away– to increase diversity of paths.  
 * Create an AS-graph (and/or IP-graph) per school from the traceroute information. External datasets can be used to annotate ASNs (e.g., CDNs vs ISPs, tier of top ISPs, IXP presence, etc.). Calculate IP-hop and AS-hop distance and latency of schools to M-Lab servers, main CDNs, IXPs, etc. Identify the number of upstreams and reliability of connections.
 
-**Task 2.3**: Use traceroutes (IST[^1] measurements) to assess M-Lab measurements fit for school connecting; e.g., while planning new GigaMeter deployments
+**Task 2.3**: Use traceroutes (`IST` measurements) to assess M-Lab measurements fit for school connecting; e.g., while planning new GigaMeter deployments
+
+_Note_: IST: Crowdsourced measurements from users running speed tests through Google Search. IST sees more than 4 million measurements per day.
 
 * Use IST (i.e., from Google Search users; crowdsourced) measurements to identify pairs of ASNs/cities where connectivity to M-Lab servers is good (e.g., servers in proximity, no bottleneck AS-hops) for measuring school connectivity. Related to findings of Tasks 3.1 and 3.2, and feeding into Task 4.x.
 
@@ -72,5 +66,3 @@ Initial design of the variation of the IQB framework and pilot application to Mo
 ## Workstream 5: Open topic \- BYOI (Bring Your Own Ideas)
 
 **Task 5.1**: Organize a hackathon sync or async, online or physical, to collect ideas from the CoP and measurement experts about (i) more research questions, (ii) other information in the M-Lab \<\> Giga dataset that could be useful for other purposes (non related to school connectivity)
-
-[^1]:  IST: Crowdsourced measurements from users running speed tests through Google Search. IST sees more than 4 million measurements per day.
