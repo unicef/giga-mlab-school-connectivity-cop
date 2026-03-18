@@ -1,7 +1,8 @@
 # Research agenda: Measuring school connectivity 
 
 * Version: 1  
-* First shared: 2026-03-13  
+* First shared: 2026-03-13
+* [Google Doc](https://docs.google.com/document/d/1Oy3H264Pd57DDFrSLTeMwlfDbDN10UyGS3pLNGPKecA/edit?usp=sharing)
 
 
 ## Workstream 1: Improving measurement tools
