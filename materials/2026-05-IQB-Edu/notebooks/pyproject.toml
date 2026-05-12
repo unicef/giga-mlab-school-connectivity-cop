@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[project]
+name = "iqb-edu-cop"
+version = "0.0.1"
+description = "Per-school IQB analysis for Giga Meter deployments - Connectivity Community of Practice"
+requires-python = ">=3.13"
+license = {text = "Apache-2.0"}
+
+dependencies = [
+    "jupyter>=1.0.0",
+    "matplotlib>=3.10.8",
+    "mlab-iqb @ git+https://github.com/m-lab/iqb.git@1b5d1306b7814c666ad2ad7c10f727d8f806437c#subdirectory=library",
+    "numpy>=1.26.0",
+    "pandas>=2.0.0",
+    "plotly>=6.7.0",
+]
