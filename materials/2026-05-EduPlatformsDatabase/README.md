@@ -1,7 +1,6 @@
 # National Digital Learning Platforms — Structured Database
 
 **Folder:** `2026-05-EduPlatformsDatabase`
-**Prepared by:** Giga (UNICEF-ITU) — Maria Abravo Reyes
 **Date:** May 2026
 
 ---
