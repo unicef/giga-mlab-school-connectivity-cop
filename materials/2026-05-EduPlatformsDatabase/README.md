@@ -36,4 +36,4 @@ Original dataset covers 492 national government or government-endorsed digital l
 
 ## Intended use
 
-This database supports IQB-Education content geography research: identifying which digital education platforms schools in a given country need to reach, and measuring whether those platforms are reachable and resolvable from school networks. The `domain` column is directly usable as an input to RIPE Atlas DNS measurements.
+This database supports IQB-Education content geography research: identifying which digital education platforms schools in a given country need to reach, and measuring whether those platforms are reachable and resolvable from school networks.
