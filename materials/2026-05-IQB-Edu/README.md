@@ -3,6 +3,7 @@
 This folder contains material to the IQB-Edu (Internet Quality Barometer for Education) for the use case of Moldova schools, created and presented by M-Lab and Giga.
 
 - [Presentation](./2026-05-18__CoP__IQB-Edu.pdf): IQB-Edu and the Moldova Use case; by Pavlos Sermpezis, M-Lab
-- [Jupyter notebook](./notebooks): IQB-Edu and the Moldova Use case; by Pavlos Sermpezis, M-Lab, and Maria Antonia Bravo, Giga 
+- [Jupyter notebook](./notebooks): IQB-Edu and the Moldova Use case; by Pavlos Sermpezis, M-Lab, and Maria Antonia Bravo, Giga
+- [Live Simple Jupyter notebook for exploring and evaluating IQB-Edu](https://mybinder.org/v2/gh/jduckles/2025-05-IBQ-Edu/HEAD?urlpath=%2Fdoc%2Ftree%2FIQB_Edu_Policy_Linkage.ipynb)
 
 Learn more about the IQB project at M-Lab's [blog post](https://www.measurementlab.net/blog/iqb/) and the [IQB github repo](https://github.com/m-lab/iqb)
