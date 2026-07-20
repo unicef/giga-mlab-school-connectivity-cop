@@ -1,14 +1,20 @@
 # QoE Measurement Suite for Learning-Ready Connectivity
 
-*Status:* **draft** | current | needs update | obsolete  
-*Author(s):* Simone Basso `sbs@measurementlab.net`
+* Version: 1
+* First shared: 2026-07-14
+* Status: draft
+* Author(s): Simone Basso `sbs@measurementlab.net`
 
 ## Goal
 
-Define and measure "learning-ready" connectivity for Giga's Connectivity
-Credits program. The target is not raw speed but whether a school's
+The goal of this document is to suggest a design for next version Internet measurements 
+that can be incorporated into GigaMeter or other school connectivity measurement tools.
+The measurements should define and measure "learning-ready" connectivity for schools. 
+The target is not raw speed but whether a school's
 connection supports real educational use cases: browsing learning platforms,
-streaming educational video, and interactive sessions.
+streaming educational video, and interactive sessions. 
+
+The design is part of the _Workstream 1: Improving measurement tools_ and Task 1.1 of [research agenda](https://github.com/unicef/giga-mlab-school-connectivity-cop/blob/main/research_agenda.md) of the Connectivity CoP.
 
 ## Core Principles
 
@@ -19,8 +25,7 @@ probes run frequently; heavyweight, bandwidth-dominated tests run less
 often. Each layer captures a distinct aspect of quality.
 
 2. **Descriptive methodology.** Build empirical distributions and plot
-quantiles over time. No reductive pass/fail thresholds. For Connectivity
-Credits or IQB-Edu, we would then need to collapse this into a number.
+quantiles over time, rather than reductive pass/fail thresholds. If the data need to be used for Internet connectivity assessment (e.g., IQB-Edu), the distributions could then be collapsed into a number.
 
 3. **API-driven measurement control.** This document defines measurement
 capabilities and the Giga API (umbrella term to describe the API/APIs that
@@ -81,7 +86,7 @@ but there are techniques to address this such as
 `whoami.v4.powerdns.org` and `whoami.v6.powerdns.org` to determine
 the *actual* resolver used by queries (regardless of configuration).
 
-BTW: errors (such as frequency of timeouts) is also very informative here.
+Note: errors (such as frequency of timeouts) is also very informative here.
 
 ### 2. TLS Handshake and DNS-over-HTTPS
 
@@ -91,9 +96,9 @@ as targets. Impossible to fully MITM this unless there are custom CAs
 but we can always bundle our own CA. The overall latency should be more
 noisy and greater than the DNS-over-UDP one.
 
-Re: bundling our own CA, worth having a conversation regarding whether
+In the case of bundling our own CA, the aspect of whether
 schools choose to (or are required to) install specific antivirus software
-or middleboxes for security. In general, the presence of these devices,
+or middleboxes for security needs to be taken into account. In general, the presence of these devices,
 especially if they decrypt TLS traffic and/or mess with TCP, could be
 an issue both for measuring QoE and performance.
 
@@ -101,7 +106,7 @@ The main metrics are (1) time to complete the transaction and (2) bytes
 sent and received, so that we can estimate whether latency dominates
 (expected) or bandwidth dominates.
 
-BTW: errors (such as frequency of timeouts) is also very informative here.
+Note: errors (such as frequency of timeouts) is also very informative here.
 
 ### 3. HTTP/2 Web Fetches
 
@@ -110,7 +115,7 @@ same origin, modeling how modern browsing works. The mechanism is the
 same regardless of target; the choice of target is policy:
 
 - **Learning platforms**: a curated list of publicly accessible landing
-pages. Richest QoE signal for the education use case, but content changes
+pages (see [examples](https://github.com/unicef/giga-mlab-school-connectivity-cop/tree/main/materials/2026-05-EduPlatformsDatabase)). Richest QoE signal for the education use case, but content changes
 over time and CDN behavior varies. Login-protected content remains out of
 reach for active measurements. The general approach — actively fetching
 resources from a curated target list — has precedent in OONI's web
@@ -129,7 +134,7 @@ a resource and getting the first byte that is actual content and not
 overhead; (b) size and time required to fetch the resource, which informs
 us of how much one needs to wait and about the download speed (indirectly).
 
-BTW: errors (such as frequency of timeouts) is also very informative here.
+Note: errors (such as frequency of timeouts) is also very informative here.
 
 ### 4. Constant-Bitrate Sustained Streaming
 
@@ -142,7 +147,7 @@ and their duration, supplemented by `tcp_info` diagnostics (RTT variance,
 retransmissions, congestion window dynamics) to explain why stalls occur
 (see the `tcp_info` caveat under layer 5). Implementation path: a new
 MSAK endpoint with fixed bandwidth target and application-level pacing
-over BBR. Requires new work but the mechanism is \~straightforward.
+over BBR.
 
 ### 5. ndt7 Single-Stream Capacity
 
@@ -179,10 +184,8 @@ and diagnostic. Already implemented for server-to-client. Requires an
 implementation from Giga Meter to specific targets.
 
 We empirically confirmed that Giga Meter can run traceroute on Windows
-devices without administrator privileges. The same holds for Linux. I
-don’t have a macOS to test. On mobile devices this used to be complex but
-the situation may have changed since the Measurement Kit days (2014-2020),
-so probably it makes sense to investigate again.
+devices without administrator privileges. The same holds for Linux. For macOS and 
+mobile devices (if needed) this should be investigated.
 
 ### 7. MSAK Multi-Stream Capacity
 
@@ -230,22 +233,18 @@ layers, the normalization question becomes less binary: a LEO connection
 might score poorly on raw single-stream throughput but adequately on
 the latency-sensitive metrics that matter for specific learning use
 cases. Decomposing quality across layers reduces the need to collapse
-everything into a single number that then requires normalization. (We
-will recompose the signals using IQB-Edu.)
+everything into a single number that then requires normalization.
 
 **Medium annotation.** Because Giga manages the Meter client, measurements
 can be annotated with metadata about the connection medium (LEO, LEO+WiFi,
 ADSL, fiber, mobile with fine-grained classification if possible, e.g.
 2G, 3G, LTE, 4G, etc.). This enables per-medium comparisons: how does
 this LEO deployment perform relative to other LEO deployments, rather
-than only against fiber? For M-Lab's general browser-based measurements,
-such annotation is impractical or impossible in general (some ISPs use
-distinct ASNs for mobile vs fixed; others share a single ASN across
-technologies), but the managed-client model makes it feasible.
+than only against fiber?
 
 Worth noting that Giga Meter uses [https://ipinfo.io/](https://ipinfo.io/)
 so any annotation that they apply to internet address blocks could also
-be added to our measurements for free.
+be added to new measurements.
 
 **Wi-Fi may be part of the measured path.** In some deployments, Giga
 Meter connects over Wi-Fi; in others, the device may be wired. When Wi-Fi
@@ -264,8 +263,7 @@ active, they naturally capture contended network conditions. If they run
 off-hours, they reflect uncontended capacity. Both are useful: a daily
 MSAK multi-stream test during off-peak hours could establish maximum
 available capacity, while lighter probes during school hours capture
-the experience under real load. (However, satellite connectivity uses
-electromagnetism, so, yeah, a broken clock...)
+the experience under real load.
 
 **Measurement cost model.** Starlink may be flat-rate, but other deployments
 may use metered connectivity. The measurement profile should account for
