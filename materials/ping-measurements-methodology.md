@@ -4,7 +4,6 @@
 * First shared: 2026-09-07
 * Status: notes / draft
 * Author(s): Loqman Salamatian `loqman@measurementlab.net`
-* Source: [Google Doc](https://docs.google.com/document/d/1RcRih-oETIUhHvW-75SWAfSX97az0LzWNrnWL87xDWk/edit)
 
 These notes sit primarily in _Workstream 1: Improving measurement tools_,
 Task 1.1 of the [research agenda](../research_agenda.md), and are a companion
