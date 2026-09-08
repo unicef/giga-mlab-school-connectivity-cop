@@ -84,8 +84,8 @@ school's link, which changes who you call and what the policy conclusion is.
 1. **Availability/uptime accounting.**
 2. **Usability classification.** Map (RTT, jitter, loss) against thresholds
    per use case: e.g. video conferencing roughly needs <150 ms RTT, <30 ms
-   jitter, <1% loss; cloud document editing tolerates more. This is
-   essentially IQB.
+   jitter, <1% loss; cloud document editing tolerates more. This relates to
+   the [Internet Quality Barometer (IQB)](https://github.com/unicef/giga-mlab-school-connectivity-cop/tree/main/materials/2026-05-IQB-Edu).
 3. **Congestion and capacity-adequacy detection.** Recurring diurnal latency
    inflation indicates an undersized or oversubscribed link even when speed
    tests at quiet times look fine.
