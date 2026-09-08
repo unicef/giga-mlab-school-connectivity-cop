@@ -5,7 +5,7 @@
 * Status: notes / draft
 * Author(s): Loqman Salamatian `loqman@measurementlab.net`
 
-These notes sit primarily in _Workstream 1: Improving measurement tools_,
+This design document sit primarily in _Workstream 1: Improving measurement tools_,
 Task 1.1 of the [research agenda](../research_agenda.md), and are a companion
 to [`qoe-measurements-design.md`](./qoe-measurements-design.md). Part 2 also
 touches Workstream 4 (new insights from existing measurement data) and Part 3
