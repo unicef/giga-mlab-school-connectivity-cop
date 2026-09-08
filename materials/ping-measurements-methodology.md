@@ -2,7 +2,7 @@
 
 * Version: 1
 * First shared: 2026-09-07
-* Status: notes / draft
+* Status: draft
 * Author(s): Loqman Salamatian `loqman@measurementlab.net`
 
 This design document sit primarily in _Workstream 1: Improving measurement tools_,
