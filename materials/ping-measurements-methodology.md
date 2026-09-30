@@ -5,8 +5,8 @@
 * Status: draft
 * Author(s): Loqman Salamatian `loqman@measurementlab.net`
 
-This design document sit primarily in _Workstream 1: Improving measurement tools_,
-Task 1.1 of the [research agenda](../research_agenda.md), and are a companion
+This design document sits primarily in _Workstream 1: Improving measurement tools_,
+Task 1.1 of the [research agenda](../research_agenda.md), and is a companion
 to [`qoe-measurements-design.md`](./qoe-measurements-design.md). Part 2 also
 touches Workstream 4 (new insights from existing measurement data) and Part 3
 is offered in the spirit of Workstream 5 (BYOI).
