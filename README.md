@@ -21,8 +21,13 @@ The CCoP brings together a diverse membership spanning academia, industry, civil
 
 ## What's in this repo
 
-### [`research_agenda.md`](https://github.com/unicef/giga-mlab-school-connectivity-cop/blob/main/research_agenda.md)
-Our living research agenda — the questions we're exploring, priorities, and direction of the community's work. If you have suggestions or edits, open a pull request or comment directly on the [Google doc](https://docs.google.com/document/d/10LuFzy9Pyz98GcoagzutCZ4nsi9TWl6G3HLO7yNwVbY/edit?tab=t.2iew71bm3jwg).
+### Research agenda
+
+Our living [`research_agenda.md`](https://github.com/unicef/giga-mlab-school-connectivity-cop/blob/main/research_agenda.md) — the questions we're exploring, priorities, and direction of the community's work. If you have suggestions or edits, open a pull request or comment directly on the [Google doc](https://docs.google.com/document/d/10LuFzy9Pyz98GcoagzutCZ4nsi9TWl6G3HLO7yNwVbY/edit?tab=t.2iew71bm3jwg).
+
+### Materials from CoP activities 
+
+In the `materials/` folder you can find material from the Community of Practice's online sessions and offline activities: presentations, notebooks, datasets and other resources.
 
 ## Past events
 
